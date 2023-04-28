@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 
 const UserCard = ({ user }) => (
     <div style={{ border: "1px solid #ccc", padding: "10px", margin: "10px" }}>
@@ -12,6 +14,10 @@ const UserCard = ({ user }) => (
             <h2>{`${user.first_name} ${user.last_name}`}</h2>
             <p>{user.email}</p>
         </div>
+
+        <Link href={`/users/${user.id}`}>
+            View Details
+        </Link>
     </div>
 );
 
